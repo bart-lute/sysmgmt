@@ -47,7 +47,7 @@
     <column name="phone2" phpName="Phone2" type="VARCHAR" size="45" required="false"/>
     <column name="created_at" phpName="CreatedAt" type="TIMESTAMP" required="true" defaultExpr="CURRENT_TIMESTAMP"/>
     <column name="updated_at" phpName="UpdatedAt" type="TIMESTAMP" required="false"/>
-    <unique name="IX-UNIQ">
+    <unique name="IX_UNIQ">
       <unique-column name="name"/>
       <unique-column name="email"/>
     </unique>
