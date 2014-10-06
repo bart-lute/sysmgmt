@@ -1,0 +1,7 @@
+lf14sm_home:
+    path:     /
+    defaults: { _controller: LF14SysMgmtBundle:Default:index }
+
+lf14sm_admin:
+  path: /admin/
+  defaults: { _controller: LF14SysMgmtBundle:Admin:index }

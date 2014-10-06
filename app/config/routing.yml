@@ -1,0 +1,4 @@
+lf14_sys_mgmt:
+    resource: "@LF14SysMgmtBundle/Resources/config/routing.yml"
+    prefix:   /
+
