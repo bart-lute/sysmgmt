@@ -5,3 +5,13 @@ lf14sm_home:
 lf14sm_admin:
   path: /admin/
   defaults: { _controller: LF14SysMgmtBundle:Admin:index }
+
+lf14sm_admin_contacts:
+  path: /admin/contacts
+  defaults: { _controller: LF14SysMgmtBundle:Contact:list }
+  
+lf14sm_admin_contact_new:
+  path: /admin/contact/new
+  defaults: { _controller: LF14SysMgmtBundle:Contact:new }
+  
+  
