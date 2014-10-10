@@ -2,5 +2,28 @@
 
 {% block body %}
 <h1>contact list</h1>
-<a href="{{ path('lf14sm_admin_contact_new') }}">new contact</a>
+
+{% if contacts is defined %}
+	<table class="table table-condensed">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>name</th>
+				<th>email</th>
+				<th>phone 1</th>
+			</tr>
+		</thead>
+		<tbody>
+		{% for contact in contacts %}
+			<tr>
+				<td>{{ contact.id }}</td>
+				<td><a href="{{ path('lf14sm_admin_contact_update', {'id': contact.id}) }}">{{ contact.name }}</a></td>
+				<td>{{ contact.email }}</td>
+				<td>{{ contact.phone1 }}</td>
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+{% endif %}
+<a href="{{ path('lf14sm_admin_contact_create') }}">{{ icon('plus') }} new contact</a>
 {% endblock %}

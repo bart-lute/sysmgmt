@@ -30,7 +30,7 @@ twig:
 assetic:
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        [ ]
+    bundles:        [ LF14SysMgmtBundle ]
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
@@ -54,3 +54,12 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+mopa_bootstrap:
+    form:
+      render_required_asterisk: true
+      render_optional_text: false
+    icons:
+      icon_set: glyphicons
+      shortcut: icon
+    menu: ~  # enables twig helpers for menu

@@ -4,8 +4,10 @@
 <meta charset="UTF-8" />
 <title>{% block title %}Welcome!{% endblock %}</title>
 {% block stylesheets %}
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+{% stylesheets filter='cssrewrite' 
+        "@MopaBootstrapBundle/Resources/public/bootstrap/dist/css/bootstrap.min.css" %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
 {% endblock %}
 <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 </head>
@@ -53,45 +55,13 @@
 		</div>
 		<!-- /.container-fluid -->
 	</nav>
-	.
-	<br /> .
-	<br /> .
-	<br /> .
-	<br /> .
-	<br /> .
-	<br /> .
-	<br /> .
-	<br /> .
-	<br /> .
-	<br /> .
-	<br /> .
-	<br /> .
-	<br /> .
-	<br /> .
-	<br /> .
-	<br /> .
-	<br /> .
-	<br /> .
-	<br /> .
-	<br /> .
-	<br /> .
-	<br /> .
-	<br /> .
-	<br /> .
-	<br /> .
-	<br /> .
-	<br /> .
-	<br /> .
-	<br /> .
-	<br /> .
-	<br /> .
-	<br /> .
-	<br /> .
-	<br /> .
-	<br />
-	{% block body %}{% endblock %} {% block javascripts %}
-	<script	src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script	src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<div class="container">
+	{% block body %}{% endblock %}
+	</div>
+	{% block javascripts %}
+		{% javascripts %}
+			<script type="text/javascript" src="{{ asset_url }}"></script>
+		{% endjavascripts %}
 	{% endblock %}
 </body>
 </html>

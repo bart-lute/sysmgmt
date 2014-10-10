@@ -10,8 +10,13 @@ lf14sm_admin_contacts:
   path: /admin/contacts
   defaults: { _controller: LF14SysMgmtBundle:Contact:list }
   
-lf14sm_admin_contact_new:
-  path: /admin/contact/new
-  defaults: { _controller: LF14SysMgmtBundle:Contact:new }
+lf14sm_admin_contact_create:
+  path: /admin/contact/create
+  defaults: { _controller: LF14SysMgmtBundle:Contact:form, id: null }
   
+lf14sm_admin_contact_update:
+  path: /admin/contact/update/{id}
+  defaults: { _controller: LF14SysMgmtBundle:Contact:form }
+  requirements:
+    id: \d+
   

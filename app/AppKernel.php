@@ -17,6 +17,10 @@ class AppKernel extends Kernel
         	new Propel\PropelBundle\PropelBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new LF14\SysMgmtBundle\LF14SysMgmtBundle(),
+			new Mopa\Bundle\BootstrapBundle\MopaBootstrapBundle(),
+        	new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+        	new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
+        	new Craue\FormFlowBundle\CraueFormFlowBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

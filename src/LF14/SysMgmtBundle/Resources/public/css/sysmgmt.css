@@ -1,0 +1,17 @@
+@CHARSET "US-ASCII";
+
+body {
+  padding-top: 70px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.sysmgmt-container {
+	max-width: 700px;
+}
+
+.btn-margin-right {
+	margin-right: 10px;
+}

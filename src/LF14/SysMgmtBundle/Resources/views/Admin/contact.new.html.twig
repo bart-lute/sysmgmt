@@ -1,9 +1,0 @@
-{% extends 'LF14SysMgmtBundle:Admin:_admin.html.twig' %}
-
-{% block body %}
-<h1>new contact</h1>
-<form action="{{ path('lf14sm_admin_contact_new') }}" method="post" {{ form_enctype(form) }}>
-    {{ form_widget(form) }}
-    <input type="submit" />
-</form>
-{% endblock %}

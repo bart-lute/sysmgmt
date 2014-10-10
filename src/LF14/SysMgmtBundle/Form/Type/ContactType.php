@@ -24,5 +24,19 @@ class ContactType extends BaseAbstractType
         $builder->add('phone2');
 //         $builder->add('createdAt');
 //         $builder->add('updatedAt');
+        $builder->add('save', 'submit', array(
+				'icon' => 'save',
+				'attr' => array(
+						'class' => 'btn btn-primary pull-right')
+				)
+		);
+		$builder->add('cancel', 'submit', array(
+				'validation_groups' => false,
+				'attr' => array(
+						'value' => 'cancel',
+						'formnovalidate' => 'formnovalidate',
+						'class' => 'btn btn-default pull-right btn-margin-right')
+				)
+		);		
     }
 }
